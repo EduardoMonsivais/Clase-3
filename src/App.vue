@@ -1,26 +1,16 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
-
-<script>
+<script setup>
 import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+import CounterFile from './components/CounterFile.vue'
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<template>
+  <header>
+  <HelloWorld />
+  <CounterFile />
+</header>
+
+<div>
+  <img :src="require('@/assets/Familia.jpg')" width="600" />
+</div>
+
+</template>
